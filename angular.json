@@ -50,6 +50,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@ng-select/ng-select/themes/default.theme.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -59,13 +63,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "8mb",
+                  "maximumError": "8mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "8mb",
+                  "maximumError": "8mb"
                 }
               ],
               "outputHashing": "all"
@@ -76,7 +80,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -119,5 +129,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8b949841-6386-4850-aeec-9d497f9afff5"
   }
 }

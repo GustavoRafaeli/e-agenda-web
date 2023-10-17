@@ -6,6 +6,7 @@ import {
   Routes,
 } from '@angular/router';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { __importDefault } from 'tslib';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
     path: 'despesas',
     loadChildren: () => import('./views/despesas/despesas.module')
     .then(m => m.DespesasModule)
+  },
+  {
+    path: 'tarefas',
+    loadChildren: () => import('./views/tarefas/tarefas.module')
+    .then(m => m.TarefasModule)
   },
 
 
